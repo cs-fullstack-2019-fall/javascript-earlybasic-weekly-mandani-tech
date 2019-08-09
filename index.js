@@ -18,26 +18,24 @@ if (userMainOptions === "1")
 	var countByonesOrtwo =prompt("To count by ones press 1  or press 2 to count ny twos");
 
 
-
 	if (countByonesOrtwo== "1")
 
 	{
-		var numOneInt = parseInt(prompt("Please enter a positive numeber here:" ));
-		var i=1;
+		var numStart1 = parseInt(prompt("Please enter a positive number to start count number there:" ));
+		var numOneInt = parseInt(prompt("Please enter a positive number to stop count here:" ));
+
+
+		var i=numStart1;
 
 		while (i<= numOneInt)
 
 		{
 			console.log(i);
+
 			i++;
 
 		}
-
     }
-
-
-
-
 
 }
 
@@ -52,21 +50,20 @@ if (countByonesOrtwo === "2")
 
 {
 
-var numTwoInt = parseInt(prompt("Please enter a positive numeber here:" ));
 
-		var x=1;
+var numStart2 = parseInt(prompt("Please enter a positive number to start count number there:" ));
+var numTwoInt = parseInt(prompt("Please enter a positive number here:" ));
+
+		var x=numStart2;
 
 		while (x<= numTwoInt)
 
 		{
 			console.log(x);
+			
 			x=x+2;
 
 		}
-
-
-
-
 
 
 }
@@ -84,42 +81,70 @@ var numTwoInt = parseInt(prompt("Please enter a positive numeber here:" ));
 if (userMainOptions === "2")
 
 { 
-	var userOptions2Calulater = prompt("Enter ' a  if you like to do addition or enter 's' for subtraction -: ");
+	var userOptions2Calulater = prompt("Enter 'a'  if you like to do addition or enter 's' for subtraction -: ");
 
-	if (userOptions2Calulater === "a")
+	     if (userOptions2Calulater === "a")
 
-	{
+	        {
 	
-	var number1UserOpt2Int = parseInt(prompt("Please enter your first number here :"));
-	var number2UserOpt2Int = parseInt(prompt("Please enter your second number here :"));
-
-	
-	alert("The addition of your numbers is  : " + (number2UserOpt2Int + number1UserOpt2Int));
-
-    }
-
-
-if (userOptions2Calulater === "s")
-
-	{
-	
-	var number1UserOpt2Int = parseInt(prompt("Please enter your first number here :"));
-	var number2UserOpt2Int = parseInt(prompt("Please enter your second number here :"));
+	           var number1UserOpt2Int = parseInt(prompt("Please enter your first number here :"));
+	           var number2UserOpt2Int = parseInt(prompt("Please enter your second number here :"));
 
 	
-	alert("The subtraction of your numbers is  : " + (number1UserOpt2Int - number2UserOpt2Int));
+	               alert("The addition of your numbers is  : " + (number2UserOpt2Int + number1UserOpt2Int));
 
-    }
+            }
 
 
-}
+         if (userOptions2Calulater === "s")
 
-if (userMainOptions === "q")
+           {
+	
+	          var number1UserOpt2Int = parseInt(prompt("Please enter your first number here :"));
+	          var number2UserOpt2Int = parseInt(prompt("Please enter your second number here :"));
+
+                  if(number2UserOpt2Int < number1UserOpt2Int)
+
+                            {
+
+                              alert("The subtraction of your numbers is  : " + (number1UserOpt2Int - number2UserOpt2Int));
+
+                            }
+	
+	          
+	           alert(" ERROR Please enter second number higher than first number");
+
+
+            }
+
+
+
+
+    if (userMainOptions === "q")
+
+    {
 
 	alert("You Quit My Program..Thank you and Good Bye!!!!");
 
+	
+    }
+
+}
+
+else
+
+{
+
+alert("ERROR");
+
+}
 
 
+
+// ### Challenge
+// - Ask the user to input the starting number when counting by ones and twos.
+// - Make sure if the user enters an invalid selection say "ERROR", then retry the question. 
+//  This should include an ERROR when a user inserts a smaller second number when counting in the above challenge.
 
 
 
